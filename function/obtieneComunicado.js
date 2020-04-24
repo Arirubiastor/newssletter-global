@@ -20,7 +20,7 @@ function iniciaHtml() {
 
 function obtieneComunicado(identityCliente, identityUsuario) {
     var xhttp = new XMLHttpRequest();
-    xhttp.open("GET", `https://2tywuqfoxe.execute-api.us-west-2.amazonaws.com/api-comunicado/obtienecomunicado?cd_identityUsuario=${identityUsuario}&cd_identityCliente=${identityCliente}`, true);
+    xhttp.open("GET", `https://64ifyqq300.execute-api.us-west-2.amazonaws.com/prod/obtienecomunicado?cd_identityUsuario=${identityUsuario}&cd_identityCliente=${identityCliente}`, true);
     xhttp.send();
     xhttp.onreadystatechange = function() {
         if (this.readyState == 4 && this.status == 200) {
@@ -40,8 +40,8 @@ function obtieneComunicado(identityCliente, identityUsuario) {
                 document.getElementById("parrafoDos_" + xmlDoc.nb_plantilla).innerHTML = xmlDoc.tx_parrafoDos;
                 document.getElementById("parrafoTres_" + xmlDoc.nb_plantilla).innerHTML = xmlDoc.tx_parrafoTres;
                 document.getElementById("piePagina_" + xmlDoc.nb_plantilla).innerHTML = xmlDoc.tx_piePagina;
-                document.getElementById("imagenUno_" + xmlDoc.nb_plantilla).innerHTML = xmlDoc.tx_imagenUno;
-                //document.getElementById("imagenDos_" + xmlDoc.nb_plantilla).innerHTML = xmlDoc.tx_imagenDos;
+                document.getElementById("imagenUno_" + xmlDoc.nb_plantilla).src = xmlDoc.tx_imagenUno;
+                document.getElementById("imagenDos_" + xmlDoc.nb_plantilla).src = xmlDoc.tx_imagenDos;
             }
 
         }
@@ -70,9 +70,8 @@ function generarId() {
     var parrafoTres = document.getElementsByName('parrafoTres');
     var piePagina = document.getElementsByName('piePagina');
     var imagenUno = document.getElementsByName('imagenUno');
-
+    var imagenDos = document.getElementsByName('imagenDos');
     var button = document.getElementsByName('button');
-    //var imagenDos = document.getElementsByName('imagenDos');
 
     //obtienePadre(tituloNombre);
     obtienePadre(titulo);
@@ -83,9 +82,8 @@ function generarId() {
     obtienePadre(parrafoTres);
     obtienePadre(piePagina);
     obtienePadre(imagenUno);
-
+    obtienePadre(imagenDos);
     obtienePadre(button);
-    //obtienePadre(imagenDos);
 }
 
 function obtienePadre(nodoHijo) {
@@ -120,7 +118,7 @@ function obtienePadre(nodoHijo) {
 
 function actualizaComunicado(identityGrupoComunicado, respuestacomunicado) {
     var xhttp = new XMLHttpRequest();
-    xhttp.open("PATCH", `https://2tywuqfoxe.execute-api.us-west-2.amazonaws.com/api-comunicado/actualizacomunicado?cd_identityGrupoComunicado=${identityGrupoComunicado}&tx_respuesta=${respuestacomunicado}`, true);
+    xhttp.open("PATCH", `https://64ifyqq300.execute-api.us-west-2.amazonaws.com/prod/actualizacomunicado?cd_identityGrupoComunicado=${identityGrupoComunicado}&tx_respuesta=${respuestacomunicado}`, true);
     xhttp.send();
     xhttp.onreadystatechange = function() {
         if (this.readyState == 4 && this.status == 200) {

@@ -14,122 +14,30 @@
     <p class="text2" name="identityGrupoComunicado" id="identityGrupoComunicado" style="display:none">
         {{identityGrupoComunicado}}
     </p>
-
-    <div class="page1" id="page1" style="display:none">
-        <div class="container"><canvas id="background"></canvas></div>
-        <div class="container-layout">
-            Hi
-            <header class="main-header">
-                <p class="hello-container">
-                    <span class="hello" name="nombre" id="nombre">
-                    Hi, {{nombre}}!
-                    </span>
-                </p>
-            </header>
-            <main>
-                <div class="info-container">
-                    <div class="image-title-container">
-                        <div class="image-container" name="imagenUno" id="imagenUno">
-                            <!-- <img class="noticia__image-1" src="{{imagenUno}}"> -->
-                            {{imagenUno}}
-                        </div>
-                        <div class="noticia__title-container">
-                            <p class="noticia__title" name="titulo" id="titulo">
-                                {{titulo}}
-                            </p>
-                        </div>
-                    </div>
-                    <p class="noticia__subtitle" name="subTitulo" id="subTitulo">
-                        {{subTitulo}}
-                    </p>
-                    <p class="noticia__text1" name="parrafoUno" id="parrafoUno">
-                        {{parrafoUno}}
-                    </p>
-                    <p class="text2" name="parrafoDos" id="parrafoDos">
-                        {{parrafoDos}}
-                    </p>
-                    <p class="text2" name="parrafoTres" id="parrafoTres">
-                        {{parrafoTres}}
-                    </p>
-                    <p class="text2" name="piePagina" id="piePagina">
-                        {{piePagina}}
-                    </p>
+    <div div class="page1" id="page1" style="display:none">
+        <header class="header">
+            <div class="header_cabecera">
+                <div class="header_tituloNombre">
+                    <div class="titulo" id="titulo" name="titulo"></div>
+                    <div>,&nbsp;</div>
+                    <div class="nombre" id="nombre" name="nombre"></div>
                 </div>
-            </main>
-            <footer class="main-footer">
-                <nav>
-                    <div class="main-footer__logos">
-                        <img class="main-footer__logo" id="logoSchryver" src="https://web-comunicado-node.s3-us-west-2.amazonaws.com/public/img/schryver.png">
-                        <img class="main-footer__logo" id="logoFrettes" src="https://web-comunicado-node.s3-us-west-2.amazonaws.com/public/img/frettes+logo.png">
-                        <img class="main-footer__logo" id="logoExikhan" src="https://web-comunicado-node.s3-us-west-2.amazonaws.com/public/img/logoExikhan-2.png">
-                    </div>
-                </nav>
-            </footer>
+                <img class="header_img" id="imagenDos" name="imagenDos">
+            </div>
+            <hr class="linea" />
+            <div class="subTitulo" id="subTitulo" name="subTitulo"></div>
+        </header>
+        <section class="main">
+            <p class="parrafoUno" id="parrafoUno" name="parrafoUno"></p>
+            <p class="parrafoDos" id="parrafoDos" name="parrafoDos"></p>
+            <p class="parrafoTres" id="parrafoTres" name="parrafoTres"></p>
+            <div class="main_right"><img class="main_img" id="imagenUno" name="imagenUno"></div>
+        </section>
+        <footer class="footer">
 
-            <button type="button" class="block" name="button" id="button" onclick="actualizaComunicado(document.getElementById('identityGrupoComunicado').innerText, 'OK')">
-                Block Button
-            </button>
-
-        </div>
+            <p class="piePagina" id="piePagina" name="piePagina"></p>
+        </footer>
     </div>
-
-    <div class="page2" id="page2" style="display:none">
-        <div class="container"><canvas id="background"></canvas></div>
-        <div class="container-layout">
-            <header class="main-header">
-                <p class="hello-container">
-                    <span class="hello" name="nombre" id="nombre">
-                    Hi, {{nombre}}!
-                    </span>
-                </p>
-            </header>
-            <main>
-                <div class="info-container">
-                    <div class="image-title-container">
-                        <div class="image-container" name="imagenUno" id="imagenUno">
-                            <!-- <img class="noticia__image-1" src="{{imagenUno}}"> -->
-                            {{imagenUno}}
-                        </div>
-                        <div class="noticia__title-container">
-                            <p class="noticia__title" name="titulo" id="titulo">
-                                {{titulo}}
-                            </p>
-                        </div>
-                    </div>
-                    <p class="noticia__subtitle" name="subTitulo" id="subTitulo">
-                        {{subTitulo}}
-                    </p>
-                    <p class="noticia__text1" name="parrafoUno" id="parrafoUno">
-                        {{parrafoUno}}
-                    </p>
-                    <p class="text2" name="parrafoDos" id="parrafoDos">
-                        {{parrafoDos}}
-                    </p>
-                    <p class="text2" name="parrafoTres" id="parrafoTres">
-                        {{parrafoTres}}
-                    </p>
-                    <p class="text2" name="piePagina" id="piePagina">
-                        {{piePagina}}
-                    </p>
-                </div>
-            </main>
-            <footer class="main-footer">
-                <nav>
-                    <div class="main-footer__logos">
-                        <img class="main-footer__logo" id="logoSchryver" src="https://web-comunicado-node.s3-us-west-2.amazonaws.com/public/img/schryver.png">
-                        <img class="main-footer__logo" id="logoFrettes" src="https://web-comunicado-node.s3-us-west-2.amazonaws.com/public/img/frettes+logo.png">
-                        <img class="main-footer__logo" id="logoExikhan" src="https://web-comunicado-node.s3-us-west-2.amazonaws.com/public/img/logoExikhan-2.png">
-                    </div>
-                </nav>
-            </footer>
-
-            <button type="button" class="block" name="button" id="button" onclick="actualizaComunicado(document.getElementById('identityGrupoComunicado').innerText, 'OK')">
-                Block Button
-            </button>
-
-        </div>
-    </div>
-
     <div class="page404" id="page404" style="display:none">
         <div>
             <div id="borderDemo">
